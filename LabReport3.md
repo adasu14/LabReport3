@@ -77,13 +77,17 @@ The -type option allows you to specify the type of file or directory to search f
 
 Find all regular files in the current directory and its subdirectories:
 ```java
-find ./technical -type f
+find ./directory_name -type f
 ```
+Output for -type f
+![Alt text](image-1.png)
 
 Find all directories in the current directory and its subdirectories:
 ```java
-find ./technical -type d
+find ./directory_name -type d
 ```
+Output for -type d
+![Alt text](image-2.png)
 
 <br>
 
@@ -93,13 +97,20 @@ The -name option lets you search for files or directories with specific names or
 
 Find all files with names starting with "file" in the current directory and its subdirectories:
 ```java
-find ./technical -name "file*"
+find ./directory_name -name "file*"
 ```
+Output for -name "file*"
+![Alt text](image-3.png)
 
-Find all files with a .txt extension in the current directory and its subdirectories:
+
+Find all files with a specific extension in the current directory and its subdirectories:
 ```java
-find ./technical -name "*.txt"
+find ./directory_name -name "*.extension"
 ```
+Output for -name "*.extension"
+![Alt text](image-4.png)
+
+Output 
 <br>
 
 **-mtime option:**
@@ -108,13 +119,17 @@ The -mtime option allows you to search for files based on their modification tim
 
 Find all files modified within the last 7 days in the current directory and its subdirectories:
 ```java
-find ./technical -type f -mtime -7
+find ./directory_name -type f -mtime -7
 ```
+Output for -mtime -7
+![Alt text](image-5.png)
 
 Find all files modified more than 30 days ago in the current directory and its subdirectories:
 ```java
-find ./technical -type f -mtime +30
+find ./technical -type f -mtime -30
 ```
+Output for -mtime -30
+![Alt text](image-6.png)
 
 <br>
 
@@ -122,15 +137,22 @@ find ./technical -type f -mtime +30
 
 The -exec option allows you to perform actions on the files or directories found by find. You can execute shell commands on the found items.
 
-Find and delete all files with a .bak extension in the current directory and its subdirectories:
+Find and delete all files with a .txt extension in the current directory and its subdirectories:
 ```java
-find ./technical -type f -name "*.bak" -exec rm {} \;
+find ./technical -type f -name "*.txt" -exec rm {} \;
 ```
+Output for -exec rm {} \ for .txt
+![Alt text](image-7.png)
 
-Find and compress all .log files in the current directory and its subdirectories into gzip format:
+Find and compress all .java files in the current directory and its subdirectories into gzip format:
 ```java
 find ./technical -type f -name "*.log" -exec gzip {} \;
 ```
+Before gzip
+![Alt text](image-8.png)
+
+Output after gzip
+![Alt text](image-9.png)
 
 **Section of lab report acknowledging ChatGPT usage**
 
