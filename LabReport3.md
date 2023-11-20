@@ -80,6 +80,7 @@ Find all regular files in the current directory and its subdirectories:
 find ./directory_name -type f
 ```
 Output for -type f
+
 ![Alt text](image-1.png)
 
 Find all directories in the current directory and its subdirectories:
@@ -87,6 +88,7 @@ Find all directories in the current directory and its subdirectories:
 find ./directory_name -type d
 ```
 Output for -type d
+
 ![Alt text](image-2.png)
 
 <br>
@@ -100,6 +102,7 @@ Find all files with names starting with "file" in the current directory and its 
 find ./directory_name -name "file*"
 ```
 Output for -name "file*"
+
 ![Alt text](image-3.png)
 
 
@@ -108,6 +111,7 @@ Find all files with a specific extension in the current directory and its subdir
 find ./directory_name -name "*.extension"
 ```
 Output for -name "*.extension"
+
 ![Alt text](image-4.png)
 
 Output 
@@ -122,6 +126,7 @@ Find all files modified within the last 7 days in the current directory and its 
 find ./directory_name -type f -mtime -7
 ```
 Output for -mtime -7
+
 ![Alt text](image-5.png)
 
 Find all files modified more than 30 days ago in the current directory and its subdirectories:
@@ -129,6 +134,7 @@ Find all files modified more than 30 days ago in the current directory and its s
 find ./technical -type f -mtime -30
 ```
 Output for -mtime -30
+
 ![Alt text](image-6.png)
 
 <br>
@@ -142,6 +148,7 @@ Find and delete all files with a .txt extension in the current directory and its
 find ./technical -type f -name "*.txt" -exec rm {} \;
 ```
 Output for -exec rm {} \ for .txt
+
 ![Alt text](image-7.png)
 
 Find and compress all .java files in the current directory and its subdirectories into gzip format:
@@ -149,9 +156,11 @@ Find and compress all .java files in the current directory and its subdirectorie
 find ./technical -type f -name "*.log" -exec gzip {} \;
 ```
 Before gzip
+
 ![Alt text](image-8.png)
 
 Output after gzip
+
 ![Alt text](image-9.png)
 
 **Section of lab report acknowledging ChatGPT usage**
