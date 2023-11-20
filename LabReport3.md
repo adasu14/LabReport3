@@ -77,18 +77,16 @@ The -type option allows you to specify the type of file or directory to search f
 
 Find all regular files in the current directory and its subdirectories:
 ```java
-find ./directory_name -type f
+find ./lab3 -type f
 ```
-Output for -type f
-
+Output
 ![Alt text](image-1.png)
 
 Find all directories in the current directory and its subdirectories:
 ```java
-find ./directory_name -type d
+find ./lab3 -type d
 ```
-Output for -type d
-
+Output 
 ![Alt text](image-2.png)
 
 <br>
@@ -97,21 +95,19 @@ Output for -type d
 
 The -name option lets you search for files or directories with specific names or patterns, using wildcards like * and ?.
 
-Find all files with names starting with "file" in the current directory and its subdirectories:
+Find all files with names starting with a specific string in the current directory and its subdirectories:
 ```java
-find ./directory_name -name "file*"
+find ./lab3 -name "Array*"
 ```
-Output for -name "file*"
-
+Output
 ![Alt text](image-3.png)
 
 
 Find all files with a specific extension in the current directory and its subdirectories:
 ```java
-find ./directory_name -name "*.extension"
+find ./lab3 -name "*.java"
 ```
-Output for -name "*.extension"
-
+Output
 ![Alt text](image-4.png)
 
 Output 
@@ -123,18 +119,16 @@ The -mtime option allows you to search for files based on their modification tim
 
 Find all files modified within the last 7 days in the current directory and its subdirectories:
 ```java
-find ./directory_name -type f -mtime -7
+find ./lab3 -type f -mtime -7
 ```
-Output for -mtime -7
-
+Output 
 ![Alt text](image-5.png)
 
 Find all files modified more than 30 days ago in the current directory and its subdirectories:
 ```java
-find ./technical -type f -mtime -30
+find ./lab3 -type f -mtime -30
 ```
-Output for -mtime -30
-
+Output
 ![Alt text](image-6.png)
 
 <br>
@@ -145,22 +139,19 @@ The -exec option allows you to perform actions on the files or directories found
 
 Find and delete all files with a .txt extension in the current directory and its subdirectories:
 ```java
-find ./technical -type f -name "*.txt" -exec rm {} \;
+find ./lab3 -type f -name "*.txt" -exec rm {} \;
 ```
 Output for -exec rm {} \ for .txt
-
 ![Alt text](image-7.png)
 
 Find and compress all .java files in the current directory and its subdirectories into gzip format:
 ```java
-find ./technical -type f -name "*.log" -exec gzip {} \;
+find ./technical -type f -name "*.java" -exec gzip {} \;
 ```
 Before gzip
-
 ![Alt text](image-8.png)
 
 Output after gzip
-
 ![Alt text](image-9.png)
 
 **Section of lab report acknowledging ChatGPT usage**
